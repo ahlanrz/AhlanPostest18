@@ -27,13 +27,23 @@ public class Search {
 
 public void search(){
     btnSearch.click();
+    delay(1);
     System.out.println("Search");
-    inputSearch.sendKeys("PLAYBOY");
+    delay(1);
+    inputSearch.sendKeys("Shirt");
     inputSearch.sendKeys(Keys.ENTER);
     System.out.println("Search Successfully");
     }
 
     public String getTxtShirt(){
       return txtShirt.getText();
+    }
+
+    static void delay ( int detik){
+        try {
+            Thread.sleep(1000 * detik);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

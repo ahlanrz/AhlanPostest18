@@ -14,23 +14,32 @@ public class Wishlist {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[contains(@class,'no-icon wishlist-fragment on-first-load')]//a[@class='add_to_wishlist single_add_to_wishlist']")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/div[1]/div[1]/div[2]/div/a")
     WebElement btnWishlist1;
 
     @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
     WebElement txtShirt1;
 
-    @FindBy(xpath = "//div[contains(@class,'no-icon wishlist-fragment on-first-load')]//a[@class='add_to_wishlist single_add_to_wishlist']")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/div[1]/div[1]/div[2]/div/a")
     WebElement btnWishlist2;
 
-    @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
+    @FindBy(xpath = "//a[normalize-space()='black lux graphic t-shirt']")
     WebElement txtShirt2;
 
-    //validasi
-    //*[@id="yith-wcwl-message"]
-    public void wishlist1(){
-    btnWishlist1.click();
+    public void Wishlist1() {
+        btnWishlist1.click();
+        System.out.println("Shirt One");
     }
 
+    public void Wishlist2() {
+        btnWishlist2.click();
+        System.out.println("Shirt Two");
+    }
 
+    public String getTxtProductOne(){
+        return txtShirt1.getText();
+    }
+    public String getTxtProductTwo() {
+        return txtShirt2.getText();
+    }
 }

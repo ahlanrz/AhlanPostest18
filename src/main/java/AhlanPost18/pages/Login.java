@@ -26,19 +26,8 @@ public class Login {
     public void login(String userName, String password) {
         this.username.sendKeys("kanslay@gmail.com");
         System.out.println("Insert Username");
-        delay(1);
         this.password.sendKeys("k4nslay@123");
         System.out.println("Insert Password");
-        delay(1);
-
-        delay(1);
         login.click();
-    }
-    static void delay ( int detik){
-        try {
-            Thread.sleep(1000 * detik);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

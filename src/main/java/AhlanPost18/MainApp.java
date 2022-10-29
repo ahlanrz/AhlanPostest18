@@ -31,7 +31,7 @@ public class MainApp {
         delay(1);
 
         driver.get("https://shop.demoqa.com");
-        System.out.println("back home");
+        System.out.println("Back Home");
         delay(1);
 
         Search search = new Search();
@@ -39,32 +39,29 @@ public class MainApp {
         System.out.println("Search");
         delay(1);
 
-//        WebElement inputSearch = driver.findElement(By.xpath("//input[@name='s']"));
-//        delay(1);
-//        inputSearch.sendKeys("PLAYBOY");
-//        inputSearch.sendKeys(Keys.ENTER);
-
         js.executeScript("window.scrollBy(0,800)");
         delay(1);
 
         Wishlist wishlist1 = new Wishlist();
-        wishlist1.wishlist1();
-        System.out.println("add Wishlist Succes");
+        wishlist1.Wishlist1();
+        System.out.println("Add Wishlist 1 Succes");
         delay(1);
 
-//        js.executeScript("window.scrollBy(0,-800)");
-//        System.out.println("Scroll ke atas lagi");
-//        delay(1);
 
         driver.get("https://shop.demoqa.com");
-        System.out.println("back home");
+        System.out.println("Back home");
         delay(1);
 
-        js.executeScript("window.scrollBy(0,800)");
+        js.executeScript("window.scrollBy(0,1100)");
+        System.out.println("Scroll ke bawah");
         delay(1);
 
-
+        Wishlist wishlist2 = new Wishlist();
+        wishlist2.Wishlist2();
+        System.out.println("Add Wishlist 1 Succes");
+        delay(1);
     }
+
     static void delay ( int detik){
         try {
             Thread.sleep(1000 * detik);
