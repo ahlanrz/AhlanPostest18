@@ -16,7 +16,7 @@ public class Search {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@class='noo-search']")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/header/div[2]/div/div/div/a")
     WebElement btnSearch;
 
     @FindBy(xpath = "//input[@name='s']")
@@ -25,25 +25,14 @@ public class Search {
     @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
     WebElement txtShirt;
 
-public void search(){
-    btnSearch.click();
-    delay(1);
-    System.out.println("Search");
-    delay(1);
-    inputSearch.sendKeys("Shirt");
-    inputSearch.sendKeys(Keys.ENTER);
-    System.out.println("Search Successfully");
+    public void search() {
+        btnSearch.click();
+        System.out.println("Clik Button Search");
+        inputSearch.sendKeys("SHIRT", Keys.ENTER);
+        System.out.println("Search Item Successfully");
     }
 
-    public String getTxtShirt(){
-      return txtShirt.getText();
-    }
-
-    static void delay ( int detik){
-        try {
-            Thread.sleep(1000 * detik);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public String getTxtShirt() {
+        return txtShirt.getText();
     }
 }

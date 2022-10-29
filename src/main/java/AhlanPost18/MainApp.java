@@ -31,33 +31,19 @@ public class MainApp {
         delay(1);
 
         driver.get("https://shop.demoqa.com");
-        System.out.println("Back Home");
+        System.out.println("Back Dashboard");
         delay(1);
 
         Search search = new Search();
         search.search();
-        System.out.println("Search");
+//        System.out.println("Search");
         delay(1);
 
-        js.executeScript("window.scrollBy(0,800)");
+        js.executeScript("window.scrollBy(0,600)");
         delay(1);
 
         Wishlist wishlist1 = new Wishlist();
         wishlist1.Wishlist1();
-        System.out.println("Add Wishlist 1 Succes");
-        delay(1);
-
-
-        driver.get("https://shop.demoqa.com");
-        System.out.println("Back home");
-        delay(1);
-
-        js.executeScript("window.scrollBy(0,1100)");
-        System.out.println("Scroll ke bawah");
-        delay(1);
-
-        Wishlist wishlist2 = new Wishlist();
-        wishlist2.Wishlist2();
         System.out.println("Add Wishlist 1 Succes");
         delay(1);
     }

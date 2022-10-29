@@ -14,24 +14,21 @@ public class Wishlist {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/div[1]/div[1]/div[2]/div/a")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[2]/div/div[1]/div[1]/div[2]/div/a")
     WebElement btnWishlist1;
 
-    @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[2]/div/h3/a")
     WebElement txtShirt1;
 
-    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/div[1]/div[1]/div[2]/div/a")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/div[1]/div[1]/div[2]/div")
     WebElement btnWishlist2;
 
-    @FindBy(xpath = "//a[normalize-space()='black lux graphic t-shirt']")
+    @FindBy(xpath = "//*[@id=\"noo-site\"]/div[2]/div[2]/div/div/div[3]/div/h3/a")
     WebElement txtShirt2;
 
     public void Wishlist1() {
         btnWishlist1.click();
         System.out.println("Shirt One");
-    }
-
-    public void Wishlist2() {
         btnWishlist2.click();
         System.out.println("Shirt Two");
     }
